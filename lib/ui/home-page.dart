@@ -39,8 +39,27 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Scaffold(
+      appBar: AppBar(
+        title: Image.network("https://developers.giphy.com/static/img/dev-logo-lg.7404c00322a8.gif"),
+        centerTitle: true,
+        backgroundColor: Colors.black,
+      ),
+      backgroundColor: Colors.black,
+      body: Padding(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: <Widget>[
+              TextField(
+                decoration: InputDecoration(
+                  labelText: "Pesquise aqui",
+                  labelStyle: TextStyle(color: Colors.white, fontSize: 18.0),
+                  border: OutlineInputBorder(),
+                ),
+              )
+            ],
+          ),
+          )
+      );
   }
 }
